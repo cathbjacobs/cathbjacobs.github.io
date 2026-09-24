@@ -1,40 +1,253 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OpenAI Acquisition Strategy, 2025–2026</title>
 <style>
-:root{--ink:#17202b;--muted:#5d6b7a;--paper:#f6f4ef;--panel:#fffdfa;--line:#d9d4c9;--blue:#2563eb;--teal:#0f766e;--gold:#c78416;--rose:#b6465f}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}header{background:#15283c;color:white;padding:56px max(24px,calc((100% - 1120px)/2)) 42px}h1{font:700 clamp(2.1rem,5vw,4rem)/1.03 Georgia,serif;margin:0;max-width:850px}header p{max-width:720px;color:#dfeafb;font-size:1.1rem;margin:18px 0 0}.wrap{max-width:1120px;margin:auto;padding:34px 24px 80px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-weight:700;font-size:.73rem;color:var(--teal)}h2{font:700 1.65rem/1.2 Georgia,serif;margin:0 0 12px}h3{margin:0;font-size:1rem}.lede{max-width:850px;font-size:1.08rem}.note{color:var(--muted);font-size:.9rem}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0 42px}.metric,.card,.chart{background:var(--panel);border:1px solid var(--line);padding:17px}.metric strong{display:block;font:700 2rem/1 Georgia,serif;color:var(--blue);margin-bottom:7px}.metric span{font-size:.86rem;color:var(--muted)}.chart-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;margin:20px 0 42px}.chart h3{margin-bottom:10px}.legend{font-size:.78rem;color:var(--muted);margin:5px 0 10px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.filters button{border:1px solid var(--line);padding:8px 11px;background:var(--panel);color:var(--ink);cursor:pointer}.filters button[aria-pressed=true]{background:var(--ink);color:white;border-color:var(--ink)}.timeline{display:grid;gap:10px}.deal{background:var(--panel);border:1px solid var(--line);padding:15px 16px;display:grid;grid-template-columns:125px 1fr auto;gap:16px;align-items:start}.date{font-size:.84rem;color:var(--muted)}.tag{display:inline-block;margin:7px 0;padding:2px 7px;font-size:.74rem;background:#dce8ff;color:#173d83}.tag.talent{background:#e3f3ee;color:#075e54}.tag.sub{background:#f7ebcf;color:#7a5004}.deal p{margin:3px 0 0;color:var(--muted);font-size:.92rem}.deal a,.sources a{color:#174ea6}.why{margin-top:9px;padding-top:9px;border-top:1px solid var(--line);font-size:.9rem}.case{border-left:5px solid var(--rose);background:#fffafa;padding:22px;margin:32px 0}.sources{columns:2;gap:28px}.sources li{break-inside:avoid;margin:0 0 10px}.method{background:#e8f3f2;padding:22px;margin-top:34px}.hidden{display:none}@media(max-width:760px){header{padding:40px 24px}.grid,.chart-grid{grid-template-columns:1fr}.deal{grid-template-columns:1fr}.sources{columns:1}}
-</style></head>
+:root{--ink:#17202b;--muted:#5d6b7a;--paper:#f6f4ef;--panel:#fffdfa;--line:#d9d4c9;--blue:#2563eb;--teal:#0f766e;--gold:#c78416;--rose:#b6465f;--violet:#7c3aed}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{background:#15283c;color:white;padding:56px max(24px,calc((100% - 1120px)/2)) 42px}
+h1{font:700 clamp(2.1rem,5vw,4rem)/1.03 Georgia,serif;margin:0;max-width:900px}
+header p{max-width:790px;color:#dfeafb;font-size:1.1rem;margin:18px 0 0}
+.wrap{max-width:1120px;margin:auto;padding:34px 24px 80px}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-weight:700;font-size:.73rem;color:var(--teal)}
+h2{font:700 1.65rem/1.2 Georgia,serif;margin:0 0 12px}
+h3{margin:0;font-size:1rem}
+.lede{max-width:900px;font-size:1.08rem}
+.note{color:var(--muted);font-size:.9rem}
+.update-band{background:#e8f3f2;border:1px solid #bfd8d4;padding:22px;margin:28px 0 24px}
+.update-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.update-card{background:rgba(255,255,255,.68);border:1px solid #cbdedb;padding:16px}
+.update-card p{margin:7px 0 0;color:#3f5360;font-size:.91rem}
+.pill{display:inline-block;margin-bottom:7px;padding:2px 7px;background:#fff;color:#075e54;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.pill.reported{color:#7f2b40;background:#fbe7ec}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0 42px}
+.metric,.card,.chart{background:var(--panel);border:1px solid var(--line);padding:17px}
+.metric strong{display:block;font:700 2rem/1 Georgia,serif;color:var(--blue);margin-bottom:7px}
+.metric span{font-size:.86rem;color:var(--muted)}
+.chart-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;margin:20px 0 42px}
+.chart h3{margin-bottom:10px}
+.legend{font-size:.78rem;color:var(--muted);margin:5px 0 10px}
+.filter-group{margin:18px 0}
+.filter-group+.filter-group{margin-top:-8px}
+.filter-label{display:block;margin-bottom:7px;color:var(--muted);font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{border:1px solid var(--line);padding:8px 11px;background:var(--panel);color:var(--ink);cursor:pointer}
+.filters button:hover{border-color:#8d9aa8}
+.filters button:focus-visible{outline:3px solid #8eb6ff;outline-offset:2px}
+.filters button[aria-pressed=true]{background:var(--ink);color:white;border-color:var(--ink)}
+.timeline{display:grid;gap:10px}
+.deal{background:var(--panel);border:1px solid var(--line);padding:15px 16px;display:grid;grid-template-columns:150px 1fr 115px;gap:16px;align-items:start}
+.deal.reported{border-left:5px solid var(--rose)}
+.date{font-size:.84rem;color:var(--muted)}
+.tag{display:inline-block;margin:7px 0;padding:2px 7px;font-size:.74rem;background:#dce8ff;color:#173d83}
+.tag.talent{background:#e3f3ee;color:#075e54}
+.tag.subsidiary{background:#f7ebcf;color:#7a5004}
+.tag.reported{background:#fbe7ec;color:#7f2b40}
+.tag.announced{background:#eee8fb;color:#54339a}
+.deal p{margin:3px 0 0;color:var(--muted);font-size:.92rem}
+.deal a,.case a{color:#174ea6}
+.why{margin-top:9px;padding-top:9px;border-top:1px solid var(--line);font-size:.9rem}
+.source-cell{text-align:right;font-size:.88rem}
+.verified{margin-top:8px;color:var(--muted);font-size:.72rem;line-height:1.35}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:32px 0}
+.case{border-left:5px solid var(--rose);background:#fffafa;padding:22px}
+.case.asset{border-left-color:var(--gold);background:#fffaf0}
+.case p:last-child{margin-bottom:0}
+.empty{background:var(--panel);border:1px solid var(--line);padding:18px;color:var(--muted)}
+@media(max-width:800px){header{padding:40px 24px}.grid,.chart-grid,.update-grid,.case-grid{grid-template-columns:1fr}.deal{grid-template-columns:1fr}.source-cell{text-align:left}.verified{display:inline;margin-left:8px}}
+</style>
+</head>
 <body>
-<header><div class="eyebrow" style="color:#a5e5db">Research report · August 2026</div><h1>OpenAI’s acquisition strategy: building an agent operating stack</h1><p>A source-led review of publicly confirmed acquisitions and acquisition agreements announced since January 2025, plus the failed Windsurf transaction as a strategic counterfactual.</p></header>
+<header>
+  <div class="eyebrow" style="color:#a5e5db">Research report · Updated September 24, 2026</div>
+  <h1>OpenAI’s acquisition strategy: building an agent operating stack</h1>
+  <p>A source-led review of OpenAI’s publicly confirmed acquisitions, announced agreements, and talent transactions since January 2025—plus separately labeled reported and unsuccessful transactions.</p>
+</header>
 <main class="wrap">
-<section><div class="eyebrow">Executive finding</div><h2>From models to governed work</h2><p class="lede">The deals point to a strategy of making AI agents more useful and dependable in real environments: observe and evaluate models, build and test software, act across interfaces, execute in customer clouds, and deploy safely inside enterprises. Strategic implications are marked as analysis; transaction facts link to their sources.</p><p class="note">Method: “acquisition” means a publicly confirmed completed acquisition or announced acquisition agreement. Talent transactions and subsidiary deals are labeled separately. Most deal values were not disclosed.</p></section>
-<section class="grid" aria-label="Summary metrics"><div class="metric"><strong id="n-all">14</strong><span>transactions in the record</span></div><div class="metric"><strong>3</strong><span>talent-focused transactions</span></div><div class="metric"><strong>1</strong><span>confirmed failed acquisition case</span></div><div class="metric"><strong>2</strong><span>publicly reported deal values</span></div></section>
-<section class="chart-grid"><div class="chart"><h3>Acquisition timeline by strategic layer</h3><div class="legend">Circle size is not deal size. Color groups the primary capability acquired. Hover a point for the deal; click it to open the source.</div><svg id="timeline" width="100%" viewBox="0 0 640 250" role="img" aria-label="Timeline of OpenAI acquisitions"></svg></div><div class="chart"><h3>Capability portfolio</h3><div class="legend">Count of transactions whose primary capability falls in each category.</div><svg id="bars" width="100%" viewBox="0 0 430 250" role="img" aria-label="Bar chart of capabilities"></svg></div></section>
-<section><div class="eyebrow">Explore the evidence</div><h2>Transaction record</h2><p class="note">Choose a category to filter. Open every source link to review the underlying announcement or reporting.</p><div class="filters" aria-label="Filter transactions"><button data-filter="all" aria-pressed="true">All</button><button data-filter="Product & interface" aria-pressed="false">Product & interface</button><button data-filter="Developer & execution" aria-pressed="false">Developer & execution</button><button data-filter="Enterprise & safety" aria-pressed="false">Enterprise & safety</button><button data-filter="Deployment & distribution" aria-pressed="false">Deployment & distribution</button><button data-filter="Vertical context" aria-pressed="false">Vertical context</button></div><div id="deals" class="timeline"></div></section>
-<section class="case"><div class="eyebrow" style="color:var(--rose)">Strategic counterfactual</div><h2>Windsurf: the deal that did not close</h2><p>OpenAI’s reported attempt to acquire the AI-coding company Windsurf shows the same ambition as its completed developer and execution deals: own more of the route from a model to dependable software work. The reported transaction did not close, with coverage pointing to concerns about how Windsurf intellectual property would interact with OpenAI’s Microsoft relationship.</p><p><strong>Implication (analysis):</strong> Windsurf exposes a constraint on an agent-first acquisition strategy. Technical fit alone is insufficient when partner rights, cloud dependence, model access, and intellectual-property control are entangled. OpenAI’s successful purchases of Astral and Ona instead bring complementary developer tooling and governed execution environments under clearer integration control.</p><p><a href="https://www.axios.com/2025/08/13/windsurf-ai-startup-code-openai-google" target="_blank" rel="noopener">Read Axios’ account</a> · <a href="https://www.theinformation.com/articles/openai-windsurf-break-acquisition-talks-microsoft-ip-concerns" target="_blank" rel="noopener">Read The Information’s reporting</a></p></section>
-<section><div class="eyebrow">Portfolio interpretation</div><h2>What the pattern implies</h2><div class="chart-grid"><article class="card"><h3>1. Reliable agents need operational infrastructure</h3><p>Neptune, Promptfoo, and Statsig strengthen experimentation, observability, evaluation, and security—systems that make agent behavior measurable rather than aspirational.</p></article><article class="card"><h3>2. Codex is expanding into execution</h3><p>Astral and Ona support a path from code generation toward tooling-aware, persistent work in controlled cloud environments.</p></article><article class="card"><h3>3. Enterprise adoption needs implementation</h3><p>Tomoro and Northslope support a forward-deployed model: integration with customer data, tools, controls, and processes.</p></article><article class="card"><h3>4. Interfaces and context are strategic</h3><p>io and Sky increase control over where agents appear and act; Torch and consumer-focused transactions add optionality around personal context.</p></article></div></section>
+  <section>
+    <div class="eyebrow">Executive finding</div>
+    <h2>From models to systems that perceive, remember, build, execute, and communicate</h2>
+    <p class="lede">The portfolio now reaches beyond model capability into the operating layers agents need in practice: sensing and interfaces, persistent data, software tooling, controlled execution, evaluation, security, enterprise implementation, and finished-work creation. Strategic implications are marked as analysis; transaction facts link directly to their sources.</p>
+    <p class="note"><strong>Method:</strong> The headline total includes source-confirmed completed acquisitions, announced acquisition agreements, subsidiary deals, and explicitly identified team transactions. Reported transactions without company confirmation—currently Glass Imaging—are visible but counted separately. Most transaction values were not disclosed.</p>
+  </section>
+
+  <section class="update-band" aria-labelledby="changed-title">
+    <div class="eyebrow">September refresh</div>
+    <h2 id="changed-title">What changed since the August edition</h2>
+    <div class="update-grid">
+      <article class="update-card"><span class="pill">New</span><h3>Instant</h3><p>The real-time database team joined OpenAI, adding persistent state and synchronization expertise for agent-built applications.</p></article>
+      <article class="update-card"><span class="pill reported">Reported</span><h3>Glass Imaging</h3><p>Reporting links OpenAI to a $300M+ computational-imaging acquisition. Neither company had publicly confirmed the deal as of this review.</p></article>
+      <article class="update-card"><span class="pill">Backfill</span><h3>NextSlide</h3><p>The presentation startup disclosed its acquisition in August, months after the transaction reportedly occurred.</p></article>
+    </div>
+  </section>
+
+  <section class="grid" aria-label="Summary metrics">
+    <div class="metric"><strong id="n-core">16</strong><span>confirmed or publicly announced transactions</span></div>
+    <div class="metric"><strong id="n-reported">1</strong><span>additional reported acquisition</span></div>
+    <div class="metric"><strong id="n-talent">4</strong><span>talent-focused transactions</span></div>
+    <div class="metric"><strong>2</strong><span>failed or alternative-outcome cases</span></div>
+  </section>
+
+  <section class="chart-grid">
+    <div class="chart">
+      <h3>Acquisition timeline by strategic layer</h3>
+      <div class="legend">Color groups the primary capability. A hollow point marks a reported, not company-confirmed, transaction. Hover for details; click to open the source.</div>
+      <svg id="timeline-chart" width="100%" viewBox="0 0 670 290" role="img" aria-label="Timeline of OpenAI acquisitions"></svg>
+    </div>
+    <div class="chart">
+      <h3>Capability portfolio</h3>
+      <div class="legend">Solid bars count confirmed or announced transactions. The outlined extension is reported but unconfirmed.</div>
+      <svg id="bars-chart" width="100%" viewBox="0 0 470 260" role="img" aria-label="Bar chart of acquired capabilities"></svg>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Explore the evidence</div>
+    <h2>Transaction record</h2>
+    <p class="note">Filter by strategic layer and evidence status. Each card distinguishes the transaction date from when the underlying source was last checked.</p>
+    <div class="filter-group">
+      <span class="filter-label">Strategic layer</span>
+      <div class="filters" aria-label="Filter transactions by strategic layer">
+        <button data-category="all" aria-pressed="true">All layers</button>
+        <button data-category="Product & interface" aria-pressed="false">Product & interface</button>
+        <button data-category="Developer & execution" aria-pressed="false">Developer & execution</button>
+        <button data-category="Enterprise & safety" aria-pressed="false">Enterprise & safety</button>
+        <button data-category="Deployment & distribution" aria-pressed="false">Deployment & distribution</button>
+        <button data-category="Vertical context" aria-pressed="false">Vertical context</button>
+      </div>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">Evidence status</span>
+      <div class="filters" aria-label="Filter transactions by evidence status">
+        <button data-stage="all" aria-pressed="true">All evidence</button>
+        <button data-stage="completed" aria-pressed="false">Completed</button>
+        <button data-stage="announced" aria-pressed="false">Agreement announced</button>
+        <button data-stage="talent" aria-pressed="false">Talent transaction</button>
+        <button data-stage="subsidiary" aria-pressed="false">Subsidiary deal</button>
+        <button data-stage="reported" aria-pressed="false">Reported—not confirmed</button>
+      </div>
+    </div>
+    <div id="deals" class="timeline" aria-live="polite"></div>
+  </section>
+
+  <section class="case-grid" aria-label="Deals that did not become full acquisitions">
+    <article class="case">
+      <div class="eyebrow" style="color:var(--rose)">Strategic counterfactual</div>
+      <h2>Windsurf: the deal that did not close</h2>
+      <p>OpenAI’s reported attempt to acquire the AI-coding company Windsurf shows the same ambition as its completed developer and execution deals: own more of the route from a model to dependable software work. The reported transaction did not close, with coverage pointing to concerns about how Windsurf intellectual property would interact with OpenAI’s Microsoft relationship.</p>
+      <p><strong>Implication (analysis):</strong> Technical fit alone is insufficient when partner rights, cloud dependence, model access, and intellectual-property control are entangled. Astral and Ona instead brought complementary tooling and controlled execution into a clearer integration structure.</p>
+      <p><a href="https://www.axios.com/2025/08/13/windsurf-ai-startup-code-openai-google" target="_blank" rel="noopener">Axios account</a> · <a href="https://www.theinformation.com/articles/openai-windsurf-break-acquisition-talks-microsoft-ip-concerns" target="_blank" rel="noopener">The Information reporting</a></p>
+    </article>
+    <article class="case asset">
+      <div class="eyebrow" style="color:#8a5a05">Alternative outcome</div>
+      <h2>Rain AI: selected patents, not the company</h2>
+      <p>Reporting indicates OpenAI evaluated a broader transaction involving the AI-chip startup but ultimately acquired selected patents rather than the business or team. The patents concern moving AI computation closer to memory to reduce data movement and power costs.</p>
+      <p><strong>Implication (analysis):</strong> OpenAI can separate critical intellectual property from organizational integration. That flexibility may be especially useful in hardware, where assets, talent, capital requirements, and manufacturing readiness carry very different risks.</p>
+      <p><a href="https://www.theinformation.com/newsletters/ai-agenda/openai-acquired-patents-altman-backed-ai-chip-startup-following-failed-acquisition" target="_blank" rel="noopener">Read The Information’s reporting</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="eyebrow">Portfolio interpretation</div>
+    <h2>What the expanded pattern implies</h2>
+    <div class="chart-grid">
+      <article class="card"><h3>1. Agents need operational infrastructure</h3><p>Neptune, Promptfoo, Statsig, and Instant strengthen observability, evaluation, security, experimentation, and persistent state—the systems that make agent behavior dependable rather than aspirational.</p></article>
+      <article class="card"><h3>2. Codex is expanding from generation into execution</h3><p>Astral and Ona support tooling-aware, persistent work in controlled cloud environments. Instant adds the synchronized data layer that agent-built applications need to keep working statefully.</p></article>
+      <article class="card"><h3>3. Enterprise adoption needs implementation</h3><p>Tomoro and Northslope support a forward-deployed model: integration with customer data, tools, controls, and business processes—not just access to a capable model.</p></article>
+      <article class="card"><h3>4. Perception and finished work are strategic</h3><p>io, Sky, and the reported Glass Imaging deal increase control over where agents sense and act. NextSlide points toward polished, editable deliverables as part of the assistant itself.</p></article>
+    </div>
+  </section>
 </main>
+
 <script>
 const deals=[
-['2025-05','io Products','Product & interface','Acquisition','AI hardware and product design','OpenAI says the io team merged with OpenAI; terms were not disclosed by OpenAI.','https://openai.com/sam-and-jony/'],
-['2025-09','Statsig','Enterprise & safety','Acquisition agreement','Experimentation, feature flags, analytics','Strengthens application testing and iteration.','https://openai.com/index/vijaye-raji-to-become-cto-of-applications-with-acquisition-of-statsig/'],
-['2025-10','Roi','Vertical context','Talent transaction','Consumer finance personalization','Founder joined; do not treat as evidence of a finance-product roadmap.','https://techcrunch.com/2025/10/03/with-its-latest-acqui-hire-openai-is-doubling-down-on-personalized-consumer-ai/'],
-['2025-10','Sky','Product & interface','Acquisition','macOS contextual agent','Moves toward action-taking across desktop applications.','https://openai.com/index/openai-acquires-software-applications-incorporated/'],
-['2025-12','Neptune.ai','Enterprise & safety','Acquisition agreement','Experiment tracking and observability','Adds visibility into model-development work.','https://openai.com/index/openai-to-acquire-neptune/'],
-['2026-01','Torch','Vertical context','Acquisition','Health-record context','Potential health-context layer with high consent and accuracy stakes.','https://www.axios.com/2026/01/12/openai-acquires-health-tech-company-torch'],
-['2026-03','Promptfoo','Enterprise & safety','Acquisition agreement','AI security and red teaming','Productizes enterprise safeguards for agent use.','https://openai.com/index/openai-to-acquire-promptfoo/'],
-['2026-03','Astral','Developer & execution','Acquisition agreement','Python developer tooling','Supports Codex across build, test, and maintenance workflows.','https://openai.com/index/openai-to-acquire-astral/'],
-['2026-04','TBPN','Deployment & distribution','Acquisition','Technology media and communications','Distribution and narrative capacity; independence is a key credibility test.','https://openai.com/index/openai-acquires-tbpn/'],
-['2026-04','Hiro Finance','Vertical context','Talent transaction','Personal-finance expertise','Team transaction; no public commitment to a finance product.','https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/'],
-['2026-05','Tomoro','Deployment & distribution','Acquisition agreement','Forward-deployed AI engineering','Helps customers move AI systems into production.','https://openai.com/index/openai-launches-the-deployment-company/'],
-['2026-06','Ona','Developer & execution','Acquisition agreement','Persistent customer-cloud execution','A building block for long-running governed agents.','https://openai.com/index/openai-to-acquire-ona/'],
-['2026-07','Northslope','Deployment & distribution','Subsidiary acquisition','Applied AI deployment','Reinforces the implementation-services strategy.','https://www.axios.com/2026/07/08/openai-deployment-company-northslope-acquisition'],
-['2026-01','Convogo','Deployment & distribution','Talent transaction','Executive coaching automation','Explicitly a team transaction, not an IP or technology acquisition.','https://techcrunch.com/2026/01/08/openai-to-acquire-the-team-behind-executive-coaching-ai-tool-convogo/']];
+  {date:'2025-05-21',dateLabel:'May 21, 2025',name:'io Products',category:'Product & interface',stage:'completed',status:'Acquisition',capability:'AI hardware and product design',implication:'Creates a path from conversational software into purpose-built physical interfaces.',source:'https://openai.com/sam-and-jony/',verified:'Aug. 14, 2026'},
+  {date:'2025-09-02',dateLabel:'Sept. 2, 2025',name:'Statsig',category:'Enterprise & safety',stage:'announced',status:'Acquisition agreement',capability:'Experimentation, feature flags, and analytics',implication:'Strengthens application testing, measurement, and iteration.',source:'https://openai.com/index/vijaye-raji-to-become-cto-of-applications-with-acquisition-of-statsig/',verified:'Aug. 14, 2026'},
+  {date:'2025-10-03',dateLabel:'Oct. 3, 2025',name:'Roi',category:'Vertical context',stage:'talent',status:'Talent transaction',capability:'Consumer-finance personalization',implication:'Adds personalization expertise; it is not evidence of a committed finance-product roadmap.',source:'https://techcrunch.com/2025/10/03/with-its-latest-acqui-hire-openai-is-doubling-down-on-personalized-consumer-ai/',verified:'Aug. 14, 2026'},
+  {date:'2025-10-23',dateLabel:'Oct. 2025',name:'Sky',category:'Product & interface',stage:'completed',status:'Acquisition',capability:'macOS contextual agent',implication:'Moves OpenAI toward action-taking across desktop applications.',source:'https://openai.com/index/openai-acquires-software-applications-incorporated/',verified:'Aug. 14, 2026'},
+  {date:'2025-12-03',dateLabel:'Dec. 2025',name:'Neptune.ai',category:'Enterprise & safety',stage:'announced',status:'Acquisition agreement',capability:'Experiment tracking and observability',implication:'Adds visibility into model-development work.',source:'https://openai.com/index/openai-to-acquire-neptune/',verified:'Aug. 14, 2026'},
+  {date:'2026-01-08',dateLabel:'Jan. 8, 2026',name:'Convogo',category:'Deployment & distribution',stage:'talent',status:'Talent transaction',capability:'Executive-coaching automation',implication:'Adds a team experienced in high-context professional workflows, not an acquired technology platform.',source:'https://techcrunch.com/2026/01/08/openai-to-acquire-the-team-behind-executive-coaching-ai-tool-convogo/',verified:'Aug. 14, 2026'},
+  {date:'2026-01-12',dateLabel:'Jan. 12, 2026',name:'Torch',category:'Vertical context',stage:'completed',status:'Acquisition',capability:'Health-record context',implication:'Adds a potential health-context layer with unusually high consent, accuracy, and data-governance stakes.',source:'https://www.axios.com/2026/01/12/openai-acquires-health-tech-company-torch',verified:'Aug. 14, 2026'},
+  {date:'2026-03-09',dateLabel:'Mar. 9, 2026',name:'Promptfoo',category:'Enterprise & safety',stage:'announced',status:'Acquisition agreement',capability:'AI security and red teaming',implication:'Productizes enterprise safeguards for agent use.',source:'https://openai.com/index/openai-to-acquire-promptfoo/',verified:'Aug. 14, 2026'},
+  {date:'2026-03-19',dateLabel:'Mar. 19, 2026',name:'Astral',category:'Developer & execution',stage:'announced',status:'Acquisition agreement',capability:'Python developer tooling',implication:'Supports Codex across build, test, and maintenance workflows.',source:'https://openai.com/index/openai-to-acquire-astral/',verified:'Aug. 14, 2026'},
+  {date:'2026-04-02',dateLabel:'Apr. 2, 2026',name:'TBPN',category:'Deployment & distribution',stage:'completed',status:'Acquisition',capability:'Technology media and communications',implication:'Adds distribution and narrative capacity; editorial independence remains a credibility test.',source:'https://openai.com/index/openai-acquires-tbpn/',verified:'Aug. 14, 2026'},
+  {date:'2026-04-13',dateLabel:'Apr. 13, 2026',name:'Hiro Finance',category:'Vertical context',stage:'talent',status:'Talent transaction',capability:'Personal-finance expertise',implication:'Adds the team without publicly committing OpenAI to a finance product.',source:'https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/',verified:'Aug. 14, 2026'},
+  {date:'2026-05-11',dateLabel:'May 11, 2026',name:'Tomoro',category:'Deployment & distribution',stage:'announced',status:'Acquisition agreement',capability:'Forward-deployed AI engineering',implication:'Helps customers move AI systems from use-case selection into production.',source:'https://openai.com/index/openai-launches-the-deployment-company/',verified:'Aug. 14, 2026'},
+  {date:'2026-06-11',dateLabel:'Announced June 11; closed Aug. 10, 2026',name:'Ona',category:'Developer & execution',stage:'completed',status:'Completed acquisition',capability:'Persistent customer-cloud execution',implication:'Provides a controlled workspace for long-running agents in enterprise environments.',source:'https://ona.com/stories/ona-joins-openai',verified:'Sept. 24, 2026'},
+  {date:'2026-07-08',dateLabel:'July 8, 2026',name:'Northslope',category:'Deployment & distribution',stage:'subsidiary',status:'Subsidiary acquisition',capability:'Applied AI deployment',implication:'Reinforces the implementation-services strategy through the OpenAI Deployment Company.',source:'https://www.axios.com/2026/07/08/openai-deployment-company-northslope-acquisition',verified:'Aug. 14, 2026'},
+  {date:'2026-08-08',dateLabel:'Disclosed Aug. 8, 2026; completed earlier',name:'NextSlide',category:'Product & interface',stage:'completed',status:'Acquisition',capability:'Editable AI-generated presentations',implication:'Moves ChatGPT closer to producing polished, revisable work products—not only drafts or answers.',source:'https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/',verified:'Sept. 24, 2026'},
+  {date:'2026-08-22',dateLabel:'Disclosed late Aug. 2026',name:'Instant',category:'Developer & execution',stage:'talent',status:'Talent transaction',capability:'Real-time database and synchronization infrastructure',implication:'Adds persistent application state and data synchronization for increasingly agent-built software.',source:'https://www.instantdb.com/essays/instant_team_joins_openai',verified:'Sept. 24, 2026'},
+  {date:'2026-09-14',dateLabel:'Reported Sept. 14, 2026',name:'Glass Imaging',category:'Product & interface',stage:'reported',status:'Reported acquisition—not company-confirmed',capability:'Computational photography and neural image processing',implication:'Would extend the io hardware thesis into the perception layer: cameras, compact sensors, and on-device visual intelligence.',source:'https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/',verified:'Sept. 24, 2026'}
+];
+
 const colors={'Product & interface':'#2563eb','Developer & execution':'#0f766e','Enterprise & safety':'#b45309','Deployment & distribution':'#7c3aed','Vertical context':'#b6465f'};
-function render(filter='all'){const el=document.querySelector('#deals');const shown=deals.filter(d=>filter==='all'||d[2]===filter);el.innerHTML=shown.map(d=>`<article class="deal"><div><div class="date">${d[0]}</div><span class="tag ${d[3].includes('Talent')?'talent':d[3].includes('Subsidiary')?'sub':''}">${d[3]}</span></div><div><h3>${d[1]}</h3><p>${d[4]}</p><div class="why"><strong>Implication (analysis):</strong> ${d[5]}</div></div><a href="${d[6]}" target="_blank" rel="noopener">Source ↗</a></article>`).join('');document.querySelector('#n-all').textContent=deals.length}
-render();document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');render(b.dataset.filter)});
-const svg=document.querySelector('#timeline');const cats=Object.keys(colors),xs={'2025-05':65,'2025-09':165,'2025-10':225,'2025-12':285,'2026-01':345,'2026-03':425,'2026-04':485,'2026-05':535,'2026-06':580,'2026-07':620};svg.innerHTML=`<line x1="45" y1="205" x2="625" y2="205" stroke="#8d9aa8"/>${Object.entries(xs).map(([d,x])=>`<text x="${x}" y="228" text-anchor="middle" font-size="10" fill="#5d6b7a">${d}</text>`).join('')}${deals.map((d,i)=>{const y=38+cats.indexOf(d[2])*32;return `<a href="${d[6]}" target="_blank"><circle cx="${xs[d[0]]}" cy="${y}" r="7" fill="${colors[d[2]]}"><title>${d[1]} — ${d[2]}</title></circle></a>`}).join('')}${cats.map((c,i)=>`<text x="4" y="${42+i*32}" font-size="10" fill="#17202b">${c}</text>`).join('')}`;
-const count=Object.fromEntries(cats.map(c=>[c,deals.filter(d=>d[2]===c).length]));const b=document.querySelector('#bars');b.innerHTML=cats.map((c,i)=>{let y=18+i*43,w=count[c]*50;return `<text x="0" y="${y+13}" font-size="11" fill="#17202b">${c}</text><rect x="166" y="${y}" width="${w}" height="20" fill="${colors[c]}"></rect><text x="${171+w}" y="${y+14}" font-size="11" fill="#17202b">${count[c]}</text>`}).join('');
-</script></body></html>
+const categories=Object.keys(colors);
+const filters={category:'all',stage:'all'};
+
+const coreDeals=deals.filter(deal=>deal.stage!=='reported');
+document.querySelector('#n-core').textContent=coreDeals.length;
+document.querySelector('#n-reported').textContent=deals.filter(deal=>deal.stage==='reported').length;
+document.querySelector('#n-talent').textContent=deals.filter(deal=>deal.stage==='talent').length;
+
+function renderDeals(){
+  const shown=deals.filter(deal=>(filters.category==='all'||deal.category===filters.category)&&(filters.stage==='all'||deal.stage===filters.stage));
+  const target=document.querySelector('#deals');
+  if(!shown.length){target.innerHTML='<div class="empty">No transactions match both filters.</div>';return}
+  target.innerHTML=shown.map(deal=>`<article class="deal ${deal.stage==='reported'?'reported':''}">
+    <div><div class="date">${deal.dateLabel}</div><span class="tag ${deal.stage}">${deal.status}</span></div>
+    <div><h3>${deal.name}</h3><p>${deal.capability}</p><div class="why"><strong>Implication (analysis):</strong> ${deal.implication}</div></div>
+    <div class="source-cell"><a href="${deal.source}" target="_blank" rel="noopener">Source ↗</a><div class="verified">Source checked<br>${deal.verified}</div></div>
+  </article>`).join('');
+}
+
+document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('[data-category]').forEach(item=>item.setAttribute('aria-pressed','false'));
+  button.setAttribute('aria-pressed','true');filters.category=button.dataset.category;renderDeals();
+}));
+document.querySelectorAll('[data-stage]').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('[data-stage]').forEach(item=>item.setAttribute('aria-pressed','false'));
+  button.setAttribute('aria-pressed','true');filters.stage=button.dataset.stage;renderDeals();
+}));
+renderDeals();
+
+function timestamp(date){return new Date(`${date}T00:00:00Z`).getTime()}
+function monthKey(date){return date.slice(0,7)}
+function monthLabel(key){return new Intl.DateTimeFormat('en-US',{month:'short',year:'2-digit',timeZone:'UTC'}).format(new Date(`${key}-01T00:00:00Z`))}
+
+const timeline=document.querySelector('#timeline-chart');
+const minDate=Math.min(...deals.map(deal=>timestamp(deal.date)));
+const maxDate=Math.max(...deals.map(deal=>timestamp(deal.date)));
+const xFor=date=>126+((timestamp(date)-minDate)/(maxDate-minDate))*510;
+const months=[...new Set(deals.map(deal=>monthKey(deal.date)))];
+const monthTicks=months.map(key=>{
+  const x=xFor(`${key}-01`);
+  return `<line x1="${x}" y1="224" x2="${x}" y2="231" stroke="#8d9aa8"/><text transform="translate(${x-2} 248) rotate(-42)" text-anchor="end" font-size="9" fill="#5d6b7a">${monthLabel(key)}</text>`;
+}).join('');
+const pointCounts={};
+const points=deals.map(deal=>{
+  const key=`${deal.date}-${deal.category}`;
+  const offset=(pointCounts[key]||0)*9;pointCounts[key]=(pointCounts[key]||0)+1;
+  const x=xFor(deal.date),y=34+categories.indexOf(deal.category)*39+offset,color=colors[deal.category];
+  const circle=deal.stage==='reported'?`<circle cx="${x}" cy="${y}" r="8" fill="#fffdfa" stroke="${color}" stroke-width="3"/>`:`<circle cx="${x}" cy="${y}" r="7" fill="${color}" stroke="#fffdfa" stroke-width="1.5"/>`;
+  return `<a href="${deal.source}" target="_blank" aria-label="Open source for ${deal.name}">${circle}<title>${deal.name} — ${deal.status}</title></a>`;
+}).join('');
+const categoryLabels=categories.map((category,index)=>`<text x="4" y="${38+index*39}" font-size="10" fill="#17202b">${category}</text>`).join('');
+timeline.innerHTML=`<line x1="126" y1="228" x2="636" y2="228" stroke="#8d9aa8"/>${monthTicks}${points}${categoryLabels}`;
+
+const bars=document.querySelector('#bars-chart');
+bars.innerHTML=categories.map((category,index)=>{
+  const y=18+index*47;
+  const core=deals.filter(deal=>deal.category===category&&deal.stage!=='reported').length;
+  const reported=deals.filter(deal=>deal.category===category&&deal.stage==='reported').length;
+  const unit=43,coreWidth=core*unit,reportedWidth=reported*unit;
+  return `<text x="0" y="${y+14}" font-size="11" fill="#17202b">${category}</text>
+    <rect x="184" y="${y}" width="${coreWidth}" height="22" fill="${colors[category]}"></rect>
+    ${reported?`<rect x="${184+coreWidth}" y="${y}" width="${reportedWidth}" height="22" fill="none" stroke="${colors[category]}" stroke-width="2" stroke-dasharray="4 3"></rect>`:''}
+    <text x="${191+coreWidth+reportedWidth}" y="${y+15}" font-size="11" fill="#17202b">${core}${reported?' + 1 reported':''}</text>`;
+}).join('');
+</script>
+</body>
+</html>
